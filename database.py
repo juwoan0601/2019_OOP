@@ -86,8 +86,8 @@ def ReturnBin(collection, name, data):
         bin =[]
         temp =''
         for p in range(0, BitNum):
-            if(instring(p) != '/'):
-                temp = temp + instring(p)
+            if(intstring[p] != '/'):
+                temp = temp + intstring[p]
             else:
                 bin.append(int(temp))
                 temp = ''
