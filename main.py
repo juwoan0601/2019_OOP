@@ -30,8 +30,8 @@ dic2 = {} #dic2는 name <==> change를 연결
 dic3 = {} #dic3는 name <==> restaurant를 연결
 l=FoodList(collection) #l은 json형식의 전체 음식 리스트, 리스트의 한 요소에는 name, unchange(맛, 주재료)
 for i in l:
-    dic1[i['name']] = ReturnBin(collection, i['name'], unchange) #database에서 unchange, chage 모두 string이므로 각각 binary vector와  int vector로 바꿔준다. 
-    dic2[i['name']] = ReturnBin(collection, i['name'], change)
+    dic1[i['name']] = ReturnBin(collection, i['name'], 'unchange') #database에서 unchange, chage 모두 string이므로 각각 binary vector와  int vector로 바꿔준다. 
+    dic2[i['name']] = ReturnBin(collection, i['name'], 'change')
     dic3[i['name']] = i['restaurant']
 
 
